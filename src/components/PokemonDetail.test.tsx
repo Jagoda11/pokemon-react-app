@@ -45,7 +45,7 @@ const mockUsePokemonDetails = hooks.usePokemonDetails as jest.Mock
 const getPokemonSpecies = api.getPokemonSpecies as jest.Mock
 const getPokemonEvolutions = api.getPokemonEvolutions as jest.Mock
 
-describe('PokemonDetail', () => {
+describe('🧐 PokemonDetail 🧐', () => {
   beforeEach(() => {
     mockUsePokemonDetails.mockImplementation(() => ({
       details: mockPokemonDetails,
@@ -66,7 +66,7 @@ describe('PokemonDetail', () => {
     jest.restoreAllMocks()
   })
 
-  it('renders without crashing', async () => {
+  it('🚀 renders without crashing', async () => {
     await act(async () =>
       render(
         <Router>
@@ -76,9 +76,10 @@ describe('PokemonDetail', () => {
     )
 
     expect(screen.getByText(mockPokemonDetails.name)).toBeInTheDocument()
+
   })
 
-  it('displays loader when loading', async () => {
+  it('🔄 displays loader when loading', async () => {
     mockUsePokemonDetails.mockImplementation(() => ({
       details: null,
       loading: true,
@@ -94,9 +95,10 @@ describe('PokemonDetail', () => {
     )
 
     expect(screen.getByTestId('loader')).toBeInTheDocument()
+
   })
 
-  it('displays error message when there is an error', async () => {
+  it('❌ displays error message when there is an error', async () => {
     const errorMessage = 'Failed to fetch data'
     mockUsePokemonDetails.mockImplementation(() => ({
       details: null,
@@ -115,7 +117,7 @@ describe('PokemonDetail', () => {
     expect(screen.getByText(`Error: ${errorMessage}`)).toBeInTheDocument()
   })
 
-  it('displays pokemon details when data is available', async () => {
+  it('displays pokemon details 📝 when data is available', async () => {
     await act(() =>
       render(
         <Router>
@@ -132,5 +134,6 @@ describe('PokemonDetail', () => {
         mockPokemonDetails.sprites.front_default,
       )
     })
+
   })
 })

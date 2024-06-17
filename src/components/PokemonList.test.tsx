@@ -14,7 +14,7 @@ jest.mock('../hooks/usePokemonList')
 jest.mock('./PokemonPreview', () => jest.fn(() => null))
 jest.mock('./Loader', () => jest.fn(() => <div>Loading...</div>))
 
-describe('PokemonList', () => {
+describe('📋 PokemonList 📋', () => {
   let mockSearchParams = new URLSearchParams()
   const mockSetSearchParams = jest.fn((newParams) => {
     mockSearchParams = new URLSearchParams(newParams)
@@ -28,19 +28,19 @@ describe('PokemonList', () => {
     ;(PokemonPreview as jest.Mock).mockImplementation(({ pokemon }) => <div>{pokemon.name}</div>)
   })
 
-  it('displays loader when loading', () => {
+  it('🔄 displays loader when loading', () => {
     ;(usePokemonList as jest.Mock).mockReturnValue({ loading: true })
     render(<PokemonList />)
     expect(screen.getByText('Loading...')).toBeInTheDocument()
   })
 
-  it('displays error message on error', () => {
+  it('❌ displays error message on error', () => {
     ;(usePokemonList as jest.Mock).mockReturnValue({ error: 'Test Error' })
     render(<PokemonList />)
     expect(screen.getByText('Error: Test Error')).toBeInTheDocument()
   })
 
-  it('renders PokemonPreview for each pokemon', () => {
+  it('👀 renders PokemonPreview for each pokemon', () => {
     ;(usePokemonList as jest.Mock).mockReturnValue({
       pokemonList: [
         { name: 'Bulbasaur', url: 'url1' },
@@ -53,7 +53,7 @@ describe('PokemonList', () => {
     expect(screen.getByText('Charmander')).toBeInTheDocument()
   })
 
-  it('navigates to next and previous pages', () => {
+  it('⏭️ navigates to next and previous pages', () => {
     ;(usePokemonList as jest.Mock).mockReturnValue({
       pokemonList: [],
       loading: false,

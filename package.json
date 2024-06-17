@@ -6,13 +6,14 @@
   "scripts": {
     "start": "echo '🚀 Starting the app...' && webpack serve --config webpack.config.cjs",
     "build": "echo '🔨 Building the app...' && webpack --config webpack.config.cjs",
-    "test": "echo '🧪 Running tests...' && jest --config jest.config.cjs --coverage",
+    "test": "echo '🧪 Running tests...' && jest --config jest.config.cjs --coverage --verbose",
     "format": "echo '🖋️ Formatting code...' && prettier --write .",
     "lint": "echo '🧹 Linting code...' && eslint . --ext .js,.ts,.tsx --ignore-path .eslintignore",
     "precommit": "echo '🔒 Precommit: Linting and testing code...' && npm run lint && npm test",
     "watch": "echo '👀 Watching files...' && jest --watch",
     "debug": "echo '🐞 Starting the app in debug mode...' && NODE_ENV=development nodemon --inspect src/index.tsx",
-    "clean": "echo '🧽 Cleaning up...' && rm -rf ./node_modules ./dist && rm package-lock.json"
+    "clean": "echo '🧽 Cleaning up...' && rm -rf ./node_modules ./dist && rm package-lock.json",
+    "postinstall": "echo '📦 Dependencies installed successfully!🥳'"
   },
   "author": "Jagoda11",
   "license": "MIT",

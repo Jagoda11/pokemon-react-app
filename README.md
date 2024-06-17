@@ -1,37 +1,104 @@
-# Gotta Code 'Em All!
+# Pokémon React App
 
-Build a web application that uses the Pokemon API to display a list of Pokemon and their details. The application should have two pages: a list of Pokemon and a detail page for each individual Pokemon. The detail page should also display the selected Pokemon's evolutions, if any.
+This is a React application built with TypeScript that leverages the Pokémon API to display a list of Pokémon and their detailed information. The application consists of two primary pages: a list of Pokémon and a detail page for each individual Pokémon. The detail page also showcases the selected Pokémon's evolutions, if any. The app features modern web development tools and best practices, including Webpack, Babel, ESLint, Prettier, and Jest for testing.
 
-## API Documentation
+## Screenshots
 
-- [Pokemon API Documentation](https://pokeapi.co/docs/v2)
-- Endpoint for Pokemon List: `https://pokeapi.co/api/v2/pokemon`
-- Endpoint for Pokemon Details: `https://pokeapi.co/api/v2/pokemon/{id or name}/`
-- Endpoint for Pokemon Species: `https://pokeapi.co/api/v2/pokemon-species/{id}`
-- Endpoint for Pokemon Evolution Chain: You retrieve this from the species endpoint evolution_chain.url
+### Pokémon List Page
 
-## Technical Requirements
+![Pokémon List Page](./assets/pokemons-list.png)
 
-- Use any TypeScript framework (Angular, Vue, React, as long as it is TypeScript).
+### Pokémon Detail Page
 
-## Acceptance Criteria
+<div style="text-align: center;">
+  <img src="./assets/pickachu.png" alt="Pokémon Detail Page" width="300">
+</div>
 
-- A list of 10 Pokemon should be displayed on the list page, including their names and images.
-- Users should be able to navigate in the list using next and previous buttons to get 10 new Pokemon.
-- Clicking on a Pokemon in the list should navigate to the detail page, which should display the Pokemon's name, image, abilities (names), and evolutions (if any).
-- If the selected Pokemon has evolutions, they should be displayed as a list with their images and names. Clicking on an evolution should navigate to its detail page.
-- Users should be able to navigate between the list and detail pages using the browser's back and forward buttons.
-- Users should be able to bookmark (web browser) or share a link of their favorite Pokemon's details page. 
+## Features
 
-## Tests
+- 📋 Display a list of 10 Pokémon with their images and names.
+- 🔄 Navigate through the list using next and previous buttons to load more Pokémon.
+- 📄 View detailed information about each Pokémon, including their name, image, abilities, and evolutions.
+- 🧬 Display a list of evolutions with images and names, which are also clickable to view their details.
+- 🔙 Navigate between list and detail pages using the browser's back and forward buttons.
+- 🔗 Bookmark or share links to favorite Pokémon's detail pages.
+- ♿ Ensure accessibility and responsiveness for a wide range of devices and users.
 
-- Implement tests for bullet points 1 and 2 in the acceptance criteria.
+## Technologies Used
 
-You don't have to spend too much time on styling if you're limited on time. Just focus on building an application that will make even Pikachu proud.
+- ⚛️ **React**: A JavaScript library for building user interfaces.
+- 📜 **TypeScript**: A superset of JavaScript that adds static types.
+- 🌐 **Webpack**: A module bundler for JavaScript applications.
+- 🛠️ **Babel**: A JavaScript compiler for converting ECMAScript 2015+ code into a backwards-compatible version.
+- 📏 **ESLint**: A tool for identifying and fixing linting problems in JavaScript.
+- 🖋️ **Prettier**: An opinionated code formatter for consistent code style.
+- 🧪 **Jest**: A JavaScript testing framework for unit and integration tests.
+- 🔄 **React Router**: A library for routing in React applications.
+- 🔍 **Jest Testing Library**: Utilities for testing React components.
+- 🌳 **Redux**: A predictable state container for JavaScript apps.
 
+## 🚀 Initial Setup
 
-## When Finished
-You have been invited as an outside collaborator in this repository. 
-Please send the code test to us by:
-* Create a new branch in this repository
-* Create a pull request from that branch to the main branch
+```bash
+git clone https://github.com/your-username/pokemon-react.git
+```
+
+cd pokemon-react
+
+```bash
+npm install
+```
+
+## 📄 Project Instructions
+
+For detailed project instructions, please refer to the [INSTRUCTIONS.md](./INSTRUCTIONS.md) file.
+
+## 📜 Scripts
+
+To run these scripts, use `npm run <script-name>`:
+
+- `start`: 🚀 Builds the code and starts the application.
+- `build`: 🔨 Compiles the TypeScript code
+- `test`: 🧪 Runs tests using Jest and generates a coverage report.
+- `format`: 🖋️ Formats the code using Prettier.
+- `lint`: 🧹 Lints all files in the project using ESLint.
+
+- `pretest`: 🔍 Lints the code before running tests.
+- `watch`: 👀 Runs tests in watch mode using Jest.
+- `clean`: 🧽 Removes the `node_modules` directory and `package-lock.json` file.
+
+## 🤖 GitHub Actions Workflows
+
+This template includes several GitHub Actions workflows that automate various tasks:
+
+- `ci.yml`: Runs your project's continuous integration (CI) tasks.
+- `close-merged-pull-requests.yml`: Automatically closes pull requests that have been merged.
+- `close-stale-issues-and-prs.yml`: Closes stale issues and pull requests.
+- `label-new-pull-requests.yml`: Automatically adds labels to new pull requests.
+- `thank-contributors-on-issue-close.yml`: Thanks contributors when an issue they commented on is closed.
+- `welcome-new-pull-requests.yml`: Posts a welcome message on new pull requests.
+- `welcome.yml`: Posts a welcome message on new issues.
+
+These workflows use the `secrets.GITHUB_TOKEN` secret, which GitHub automatically creates for every repository. You can create a personal access token and add it as a secret in your repository. For more information, see [Creating and storing encrypted secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
+
+## 🌐 GitHub Codespaces Support
+
+This project includes a `.devcontainer.json` file which allows you to work on this project in a Docker container using [GitHub Codespaces](https://github.com/features/codespaces). This helps to maintain a consistent development environment, making it easier for you to collaborate with others without having to worry about individual setup.
+
+GitHub Codespaces configures your development environment based on your project's needs using this file. When you create a new codespace for this project, the Codespaces environment is automatically configured as per the settings defined in `.devcontainer.json`.
+
+To use GitHub Codespaces:
+
+1. Navigate to the main page of the repository.
+2. Click the Code button and then click "Open with Codespaces".
+3. Click "+ New codespace".
+
+Your development environment is now set up and running in a Docker container in the cloud. All commands you run in the Codespaces terminal will be executed inside the container. Any changes you make to the project will be reflected in the container and vice versa.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
+
+© 2024 Jagoda11
+
+This README template provides a basic structure for documenting your projects. You can enhance and modify it for each new project based on the project's unique aspects and requirements.

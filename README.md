@@ -11,7 +11,7 @@ This is a React application built with TypeScript that leverages the Pokémon AP
 ### Pokémon Detail Page
 
 <div style="text-align: center;">
-  <img src="./assets/pickachu.png" alt="Pokémon Detail Page" width="300">
+  <img src="./assets/pikachu.png" alt="Pokémon Detail Page" width="300">
 </div>
 
 ## Features

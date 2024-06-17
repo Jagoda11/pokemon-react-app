@@ -1,6 +1,10 @@
 # Pokémon React App
 
-This is a React application built with TypeScript that leverages the Pokémon API to display a list of Pokémon and their detailed information. The application consists of two primary pages: a list of Pokémon and a detail page for each individual Pokémon. The detail page also showcases the selected Pokémon's evolutions, if any. The app features modern web development tools and best practices, including Webpack, Babel, ESLint, Prettier, and Jest for testing.
+This is a React application built with TypeScript that leverages the Pokémon API to display a list of Pokémon and their detailed information.
+The application consists of two primary pages:
+a list of Pokémon
+and a detail page for each individual Pokémon. The detail page also showcases the selected Pokémon's evolutions, if any.
+The app features modern web development tools and best practices, including Webpack, Babel, ESLint, Prettier, and Jest for testing.
 
 ## Screenshots
 

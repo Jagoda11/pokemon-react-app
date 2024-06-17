@@ -8,7 +8,7 @@
     "build": "echo '🔨 Building the app...' && webpack --config webpack.config.cjs",
     "test": "echo '🧪 Running tests...' && jest --config jest.config.cjs --coverage --verbose",
     "format": "echo '🖋️ Formatting code...' && prettier --write .",
-    "lint": "echo '🧹 Linting code...' && eslint . --ext .js,.ts,.tsx --ignore-path .eslintignore",
+    "lint": "echo '🧹 Linting code...' && eslint . --ext .js,.ts,.tsx --ignore-path .eslintignore && echo '✅ Linting completed!'",
     "precommit": "echo '🔒 Precommit: Linting and testing code...' && npm run lint && npm test",
     "watch": "echo '👀 Watching files...' && jest --watch",
     "debug": "echo '🐞 Starting the app in debug mode...' && NODE_ENV=development nodemon --inspect src/index.tsx",

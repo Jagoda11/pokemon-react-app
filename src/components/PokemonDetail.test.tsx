@@ -76,7 +76,6 @@ describe('🧐 PokemonDetail 🧐', () => {
     )
 
     expect(screen.getByText(mockPokemonDetails.name)).toBeInTheDocument()
-
   })
 
   it('🔄 displays loader when loading', async () => {
@@ -95,7 +94,6 @@ describe('🧐 PokemonDetail 🧐', () => {
     )
 
     expect(screen.getByTestId('loader')).toBeInTheDocument()
-
   })
 
   it('❌ displays error message when there is an error', async () => {
@@ -134,6 +132,5 @@ describe('🧐 PokemonDetail 🧐', () => {
         mockPokemonDetails.sprites.front_default,
       )
     })
-
   })
 })

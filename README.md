@@ -44,10 +44,10 @@ The app features modern web development tools and best practices, including Webp
 ## 🚀 Initial Setup
 
 ```bash
-git clone https://github.com/your-username/pokemon-react.git
+git clone https://github.com/Bannerflow/frontend-codetest-81960260.git
 ```
 
-cd pokemon-react
+cd frontend-codetest-81960260
 
 ```bash
 npm install
@@ -61,7 +61,7 @@ For detailed project instructions, please refer to the [INSTRUCTIONS.md](./INSTR
 
 To run these scripts, use `npm run <script-name>`:
 
-- `start`: 🚀 Builds the code and starts the application.
+- `start`: 🚀 Builds the code and starts the application at `http://localhost:3000.`
 - `build`: 🔨 Compiles the TypeScript code
 - `test`: 🧪 Runs tests using Jest and generates a coverage report.
 - `format`: 🖋️ Formats the code using Prettier.

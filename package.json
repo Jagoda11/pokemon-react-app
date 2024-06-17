@@ -4,8 +4,8 @@
   "description": "A template for TypeScript/JavaScript projects",
   "main": "src/index.tsx",
   "scripts": {
-    "start": "echo '🚀 Starting the app...' && webpack serve --config webpack.config.cjs",
-    "build": "echo '🔨 Building the app...' && webpack --config webpack.config.cjs",
+    "start": "echo '🚀 Starting the app...' && webpack serve --config webpack.config.cjs && echo '🌟✨ App is up and running! Visit http://localhost:3000 ✨'",
+    "build": "echo '🔨 Building the app...' && webpack --config webpack.config.cjs && echo '🏗️✨ Build completed! Your app is ready! ✨'",
     "test": "echo '🧪 Running tests...' && jest --config jest.config.cjs --coverage --verbose",
     "format": "echo '🖋️ Formatting code...' && prettier --write . && echo '✨🎨 Formatting completed! Your code is now beautifully formatted! ✨'",
     "lint": "echo '🧹 Linting code...' && eslint . --ext .js,.ts,.tsx --ignore-path .eslintignore && echo '✅ Linting completed!'",

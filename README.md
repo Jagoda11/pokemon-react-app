@@ -103,7 +103,7 @@ We welcome contributions! Here are some guidelines to help you get started:
 2. **Clone Your Fork**: Clone your fork to your local machine.
 
 ```bash
-git clone https://github.com/your-username/pokemon-react-app.git
+git clone https://github.com/Jagoda11/pokemon-react-app.git
 cd pokemon-react-app
 ```
 

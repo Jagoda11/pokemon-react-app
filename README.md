@@ -44,18 +44,14 @@ The app features modern web development tools and best practices, including Webp
 ## 🚀 Initial Setup
 
 ```bash
-git clone https://github.com/Bannerflow/frontend-codetest-81960260.git
+git clone https://github.com/Jagoda11/pokemon-react-app.git
 ```
 
-cd frontend-codetest-81960260
+cd pokemon-react-app
 
 ```bash
 npm install
 ```
-
-## 📄 Project Instructions
-
-For detailed project instructions, please refer to the [INSTRUCTIONS.md](./INSTRUCTIONS.md) file.
 
 ## 📜 Scripts
 

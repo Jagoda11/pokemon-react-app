@@ -95,6 +95,52 @@ To use GitHub Codespaces:
 
 Your development environment is now set up and running in a Docker container in the cloud. All commands you run in the Codespaces terminal will be executed inside the container. Any changes you make to the project will be reflected in the container and vice versa.
 
+## Contributing
+
+We welcome contributions! Here are some guidelines to help you get started:
+
+1. **Fork the Repository**: Click the "Fork" button at the top right of this page.
+2. **Clone Your Fork**: Clone your fork to your local machine.
+
+```bash
+git clone https://github.com/your-username/pokemon-react-app.git
+cd pokemon-react-app
+```
+
+Create a Branch: Create a new branch for your feature or bugfix.
+
+```bash
+git checkout -b my-feature-branch
+```
+
+Make Your Changes: Make your changes to the codebase.
+
+Commit Your Changes: Commit your changes with a clear message.
+
+```bash
+git commit -m "Add new feature"
+```
+
+Push to Your Fork: Push your changes to your fork.
+
+```bash
+git push origin my-feature-branch
+```
+
+Open a Pull Request: Open a pull request against the main branch of this repository.
+
+## Issue Templates
+
+When opening a new issue, please use the relevant template:
+
+- [Bug Report](.github/ISSUE_TEMPLATE/bug_report.md)
+- [Custom Issue](.github/ISSUE_TEMPLATE/custom_issue.md)
+- [Feature Request](.github/ISSUE_TEMPLATE/feature_request.md)
+
+## Code of Conduct
+
+Please read our [Code of Conduct](CODE_OF_CONDUCT.md) to understand the standards we uphold in our community.
+
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.

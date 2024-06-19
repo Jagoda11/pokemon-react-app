@@ -8,7 +8,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: '/pokemon-react-app/',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],

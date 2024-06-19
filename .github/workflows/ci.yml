@@ -26,3 +26,8 @@ jobs:
         run: npm run build
       - name: 🧪 Test with coverage
         run: npm run test
+      - name: 🚀 Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main' # Deploy only on push to main branch
+        run: npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

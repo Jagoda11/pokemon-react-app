@@ -15,7 +15,7 @@
     "debug": "echo '🐞 Starting the app in debug mode...' && NODE_ENV=development nodemon --inspect src/index.tsx",
     "clean": "echo '🧽 Cleaning up...' && rm -rf ./node_modules ./dist && rm package-lock.json",
     "postinstall": "echo '📦 Dependencies installed successfully!🥳'",
-    "deploy": "echo '🚀 Deploying the app...' && gh-pages -d dist --repo && echo '🌟✨ App is deployed! Visit https://Jagoda11.github.io/pokemon-ract-app ✨'"
+    "deploy": "echo '🚀 Deploying the app...' && gh-pages -d dist --repo https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/Jagoda11/pokemon-react-app.git && echo '🌟✨ App is deployed! Visit https://Jagoda11.github.io/pokemon-react-app ✨'"
   },
   "author": "Jagoda11",
   "license": "MIT",

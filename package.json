@@ -14,7 +14,8 @@
     "watch": "echo '👀 Watching files...' && jest --watch",
     "debug": "echo '🐞 Starting the app in debug mode...' && NODE_ENV=development nodemon --inspect src/index.tsx",
     "clean": "echo '🧽 Cleaning up...' && rm -rf ./node_modules ./dist && rm package-lock.json",
-    "postinstall": "echo '📦 Dependencies installed successfully!🥳'"
+    "postinstall": "echo '📦 Dependencies installed successfully!🥳'",
+    "deploy": "echo '🚀 Deploying the app...' && gh-pages -d dist && echo '🌟✨ App is deployed! Visit https://Jagoda11.github.io/pokemon-ract-app ✨'"
   },
   "author": "Jagoda11",
   "license": "MIT",

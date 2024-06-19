@@ -6,6 +6,10 @@ a list of Pokémon
 and a detail page for each individual Pokémon. The detail page also showcases the selected Pokémon's evolutions, if any.
 The app features modern web development tools and best practices, including Webpack, Babel, ESLint, Prettier, and Jest for testing.
 
+## 🚀 Deployment
+
+This application is deployed using GitHub Pages. You can access it at [Pokémon React App](https://Jagoda11.github.io/pokemon-react-app).
+
 ## Screenshots
 
 ### Pokémon List Page

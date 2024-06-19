@@ -1,7 +1,7 @@
 {
-  "name": "pokemon-react",
+  "name": "pokemon-react-app",
   "version": "1.0.0",
-  "homepage": "https://Jagoda11.github.io/pokemon-ract-app",
+  "homepage": "https://Jagoda11.github.io/pokemon-react-app",
   "description": "A template for TypeScript/JavaScript projects",
   "main": "src/index.tsx",
   "scripts": {

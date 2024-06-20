@@ -10,6 +10,8 @@ The app features modern web development tools and best practices, including Webp
 
 This application is deployed using GitHub Pages. You can access it at [Pokémon React App](https://Jagoda11.github.io/pokemon-react-app).
 
+For details on how this app is deployed using TypeScript, GitHub Actions, and GitHub Pages, check out my Medium article: [Deploying a React App with TypeScript and GitHub Actions to GitHub Pages](https://medium.com/@jagoda11/deploying-a-react-app-with-typescript-and-github-actions-to-github-pages-93c12d6c6675)
+
 ## Screenshots
 
 ### Pokémon List Page

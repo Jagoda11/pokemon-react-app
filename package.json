@@ -2,7 +2,7 @@
   "name": "pokemon-react-app",
   "version": "1.0.0",
   "homepage": "https://Jagoda11.github.io/pokemon-react-app",
-  "description": "A template for TypeScript/JavaScript projects",
+  "description": "Pokemon app built with React, Redux, Typescript and TailwindCSS.",
   "main": "src/index.tsx",
   "scripts": {
     "start": "echo '🚀 Starting the app...' && webpack serve --config webpack.config.cjs && echo '🌟✨ App is up and running! Visit http://localhost:3000 ✨'",
@@ -14,8 +14,7 @@
     "watch": "echo '👀 Watching files...' && jest --watch",
     "debug": "echo '🐞 Starting the app in debug mode...' && NODE_ENV=development nodemon --inspect src/index.tsx",
     "clean": "echo '🧽 Cleaning up...' && rm -rf ./node_modules ./dist && rm package-lock.json",
-    "postinstall": "echo '📦 Dependencies installed successfully!🥳'",
-    "deploy": "echo '🚀 Deploying the app...' && gh-pages -d dist --repo https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/Jagoda11/pokemon-react-app.git && echo '🌟✨ App is deployed! Visit https://Jagoda11.github.io/pokemon-react-app ✨'"
+    "postinstall": "echo '📦 Dependencies installed successfully!🥳'"
   },
   "author": "Jagoda11",
   "license": "MIT",

@@ -152,5 +152,3 @@ Please read our [Code of Conduct](CODE_OF_CONDUCT.md) to understand the standard
 This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
 
 © 2024 Jagoda11
-
-This README template provides a basic structure for documenting your projects. You can enhance and modify it for each new project based on the project's unique aspects and requirements.

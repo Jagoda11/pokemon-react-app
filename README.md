@@ -1,5 +1,10 @@
 # Pokémon React App
 
+![Build Status](https://github.com/Jagoda11/pokemon-react-app/actions/workflows/ci.yml/badge.svg)
+![GitHub Pages](https://img.shields.io/github/deployments/Jagoda11/pokemon-react-app/github-pages)
+![License](https://img.shields.io/github/license/Jagoda11/pokemon-react-app)
+![GitHub Issues](https://img.shields.io/github/issues/Jagoda11/pokemon-react-app)
+
 This is a React application built with TypeScript that leverages the Pokémon API to display a list of Pokémon and their detailed information.
 The application consists of two primary pages:
 a list of Pokémon

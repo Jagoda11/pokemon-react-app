@@ -1,6 +1,6 @@
 # Pokémon React App
 
-![License](https://img.shields.io/github/license/Jagoda11/pokemon-react-app?style=flat-square&color=blue)
+![License](https://img.shields.io/github/license/Jagoda11/pokemon-react-app?style=flat-square&color=orange)
 ![Open Issues](https://img.shields.io/github/issues/Jagoda11/pokemon-react-app?style=flat-square&color=orange)
 ![Last Commit](https://img.shields.io/github/last-commit/Jagoda11/pokemon-react-app/main?style=flat-square&color=blue)
 ![Build Status](https://github.com/Jagoda11/pokemon-react-app/actions/workflows/🚀ci.yml/badge.svg?branch=main)

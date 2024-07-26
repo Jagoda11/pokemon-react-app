@@ -49,7 +49,7 @@ coverage/
 Thumbs.db
 
 # Husky hooks directory
-.husky/
+# .husky/
 
 # IDE-specific files
 # Editor directories and files

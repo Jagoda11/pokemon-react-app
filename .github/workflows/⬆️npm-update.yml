@@ -30,9 +30,6 @@ jobs:
       - name: ⬆️ Update dependencies in package.json
         run: ncu -u
 
-      - name: 📦 Install dependencies
-        run: npm install
-
       - name: ⬆️ Update all packages except ESLint
         run: |
           ncu -x eslint -u
@@ -44,7 +41,7 @@ jobs:
 
       - name: 🧪 Run tests
         run: npm test
-        continue-on-error: true # Continue even if tests fail to handle revert
+        continue-on-error: true # Continue to next step if the tests fail, we will check for the result later
 
       - name: Check Test Results
         id: check_tests

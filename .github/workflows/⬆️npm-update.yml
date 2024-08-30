@@ -27,6 +27,12 @@ jobs:
       - name: 📦 Install npm-check-updates
         run: npm install -g npm-check-updates
 
+      - name: ⬆️ Update dependencies in package.json
+        run: ncu -u
+
+      - name: 📦 Install dependencies
+        run: npm install
+
       - name: ⬆️ Update all packages except ESLint
         run: |
           ncu -x eslint -u

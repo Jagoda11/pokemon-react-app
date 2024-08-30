@@ -48,9 +48,6 @@ coverage/
 .DS_Store
 Thumbs.db
 
-# Husky hooks directory
-# .husky/
-
 # IDE-specific files
 # Editor directories and files
 .vscode/*

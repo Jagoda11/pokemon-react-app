@@ -38,7 +38,6 @@ jobs:
 
       - name: 🧪 Run tests
         run: npm test
-        continue-on-error: true # Continue to next step if the tests fail, we will check for the result later
 
       - name: Check Test Results
         id: check_tests

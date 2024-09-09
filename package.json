@@ -24,9 +24,9 @@
     "@babel/preset-react": "^7.24.7",
     "@babel/preset-typescript": "^7.24.7",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
+    "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
-    "@testing-library/dom": "^10.4.0",
     "@types/jest": "^29.5.12",
     "@types/node": "^22.5.4",
     "@types/react": "^18.3.5",
@@ -62,9 +62,9 @@
     "whatwg-fetch": "^3.6.20"
   },
   "dependencies": {
-    "@testing-library/react": "^16.0.1",
-    "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.1",
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.7",
     "express": "^4.19.2",

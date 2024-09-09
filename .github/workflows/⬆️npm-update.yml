@@ -39,6 +39,9 @@ jobs:
       - name: 📋 List installed dependencies
         run: npm ls
 
+      - name: 🧹 Run lint
+        run: npm run lint
+
       - name: 🧪 Run tests
         run: npm test
 

@@ -1,7 +1,6 @@
 // src/setupTests.ts
 import '@testing-library/jest-dom'
 import 'whatwg-fetch'
-import '@testing-library/jest-dom'
 
 beforeEach(() => {
   global.fetch = jest.fn((url) => {

@@ -1,6 +1,12 @@
 // src/setupTests.ts
 import '@testing-library/jest-dom'
 import 'whatwg-fetch'
+import { TextEncoder } from 'util'
+
+// Ensure TextEncoder is available globally
+if (typeof global.TextEncoder === 'undefined') {
+  global.TextEncoder = TextEncoder
+}
 
 beforeEach(() => {
   global.fetch = jest.fn((url) => {

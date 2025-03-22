@@ -44,6 +44,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
+    new HtmlWebpackPlugin({
+    filename: '404.html',
+    template: './public/404.html',
+    inject: false,
+  }),
     new ReactRefreshWebpackPlugin(),
   ],
 }

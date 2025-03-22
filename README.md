@@ -71,7 +71,7 @@ npm install
 
 To run these scripts, use `npm run <script-name>`:
 
-- `start`: 🚀 Builds the code and starts the application at `http://localhost:3000.`
+- `start`: 🚀 Builds the code and starts the application at `http://localhost:3002.`
 - `build`: 🔨 Compiles the TypeScript code
 - `test`: 🧪 Runs tests using Jest and generates a coverage report.
 - `format`: 🖋️ Formats the code using Prettier.

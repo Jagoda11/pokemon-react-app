@@ -35,20 +35,24 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'public'),
     },
-    historyApiFallback: true,
+    historyApiFallback: {
+      index: '/pokemon-react-app/index.html',
+      disableDotRule: true,
+    },
     compress: true,
     hot: true,
-    port: 3000,
+    port: 3002,
+    open: ['/pokemon-react-app/'],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
     new HtmlWebpackPlugin({
-    filename: '404.html',
-    template: './public/404.html',
-    inject: false,
-  }),
+      filename: '404.html',
+      template: './public/404.html',
+      inject: false,
+    }),
     new ReactRefreshWebpackPlugin(),
   ],
 }

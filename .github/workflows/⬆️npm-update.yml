@@ -27,9 +27,9 @@ jobs:
       - name: 📦 Install npm-check-updates
         run: npm install -g npm-check-updates
 
-      - name: ⬆️ Update all packages except ESLint
+      - name: ⬆️ Update all packages
         run: |
-          ncu -x eslint -u
+          ncu -u
           npm install
 
       - name: 📦 Update dependencies with legacy peer deps

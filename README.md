@@ -89,9 +89,6 @@ This template includes several GitHub Actions workflows that automate various ta
 - `🔒close-merged-pull-requests.yml`: Automatically closes pull requests that have been merged.
 - `🔐close-stale-issues-and-prs.yml`: Closes stale issues and pull requests.
 - `🏷️label-new-pull-requests.yml`: Automatically adds labels to new pull requests.
-- `🙏thank-contributors-on-issue-close.yml`: Thanks contributors when an issue they commented on is closed.
-- `👋welcome-new-pull-requests.yml`: Posts a welcome message on new pull requests.
-- `🙋‍♀️welcome.yml`: Posts a welcome message on new issues.
 - `⬆️npm-update.yml`: checks for new versions of the dependencies and updates package.json and package-lock.json, scans with
   [Debricked](https://debricked.com/) for vulnerabilities before it pushes the changes.
 
@@ -99,7 +96,7 @@ These workflows use the `secrets.GITHUB_TOKEN` secret, which GitHub automaticall
 
 ## 🌐 GitHub Codespaces Support
 
-This project includes a `.devcontainer.json` file which allows you to work on this project in a Docker container using [GitHub Codespaces](https://github.com/features/codespaces). This helps to maintain a consistent development environment, making it easier for you to collaborate with others without having to worry about individual setup .
+This project includes a `.devcontainer.json` file, which allows you to work on this project in a Docker container using [GitHub Codespaces](https://github.com/features/codespaces). This helps to maintain a consistent development environment, making it easier for you to collaborate with others without having to worry about individual setups.
 
 GitHub Codespaces configures your development environment based on your project's needs using this file. When you create a new codespace for this project, the Codespaces environment is automatically configured as per the settings defined in `.devcontainer.json`.
 

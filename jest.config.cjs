@@ -4,7 +4,14 @@ module.exports = {
   testPathIgnorePatterns: ['/node_modules/', '/playwright-tests/', '/cypress-tests/', '/dist/'],
   testEnvironment: 'jest-environment-jsdom',
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(ts|tsx)$': [
+      'ts-jest',
+      {
+        tsconfig: {
+          moduleResolution: 'node16',
+        },
+      },
+    ],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],

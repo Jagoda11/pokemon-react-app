@@ -28,9 +28,7 @@ For details on how this app is deployed using TypeScript, GitHub Actions, and Gi
 
 ### Pokémon Detail Page
 
-<div style="text-align: center;">
-  <img src="./assets/pikachu.png" alt="Pokémon Detail Page" width="300">
-</div>
+![Pokémon Detail Page](./assets/pikachu.png)
 
 ## Features
 

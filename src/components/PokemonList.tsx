@@ -1,13 +1,14 @@
-import React from 'react'
-import { useSearchParams } from 'react-router-dom'
-import { usePokemonList } from '../hooks/usePokemonList'
-import PokemonPreview from './PokemonPreview'
-import Loader from './Loader'
 import './PokemonList.css'
+
+import Loader from './Loader'
+import PokemonPreview from './PokemonPreview'
+import React from 'react'
+import { usePokemonList } from '../hooks/usePokemonList'
+import { useSearchParams } from 'react-router-dom'
 
 const PokemonList: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams()
-  const offset = parseInt(searchParams.get('offset') || '0', 10)
+  const offset = Number.parseInt(searchParams.get('offset') || '0', 10)
   const { pokemonList, loading, error, hasNext } = usePokemonList({ offset })
 
   const handleNext = () => {
@@ -49,14 +50,13 @@ const PokemonList: React.FC = () => {
         </button>
       </div>
 
-      <div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
-        role="list"
-      >
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {pokemonList.map((pokemon) => (
-          <PokemonPreview key={pokemon.name} pokemon={pokemon} offset={offset} />
+          <li key={pokemon.name}>
+            <PokemonPreview pokemon={pokemon} offset={offset} />
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   )
 }

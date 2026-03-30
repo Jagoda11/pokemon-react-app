@@ -1,15 +1,15 @@
 // src/setupTests.ts
-import '@testing-library/jest-dom'
+import '@testing-library/jest-dom/vitest'
 import 'whatwg-fetch'
-import { TextEncoder } from 'util'
+
+import { TextEncoder } from 'node:util'
+import { vi } from 'vitest'
 
 // Ensure TextEncoder is available globally
-if (typeof global.TextEncoder === 'undefined') {
-  global.TextEncoder = TextEncoder
-}
+globalThis.TextEncoder ??= TextEncoder
 
 beforeEach(() => {
-  global.fetch = jest.fn((url) => {
+  globalThis.fetch = vi.fn((url) => {
     if (url.includes('/pokemon-species/1/')) {
       return Promise.resolve({
         json: () =>
@@ -72,9 +72,9 @@ beforeEach(() => {
     return Promise.resolve({
       json: () => Promise.resolve({}),
     })
-  }) as jest.Mock
+  }) as any
 })
 
 afterEach(() => {
-  jest.clearAllMocks()
+  vi.clearAllMocks()
 })

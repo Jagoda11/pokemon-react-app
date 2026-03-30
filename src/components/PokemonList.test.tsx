@@ -1,22 +1,25 @@
-import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import { useSearchParams } from 'react-router-dom'
-import { usePokemonList } from '../hooks/usePokemonList'
+
+import { fireEvent, render, screen } from '@testing-library/react'
+
 import PokemonList from './PokemonList'
 import PokemonPreview from './PokemonPreview'
+import React from 'react'
+import { usePokemonList } from '../hooks/usePokemonList'
+import { useSearchParams } from 'react-router-dom'
+import { vi } from 'vitest'
 
 // Mocking modules and components
-jest.mock('react-router-dom', () => ({
-  useSearchParams: jest.fn(),
+vi.mock('react-router-dom', () => ({
+  useSearchParams: vi.fn(),
 }))
-jest.mock('../hooks/usePokemonList')
-jest.mock('./PokemonPreview', () => jest.fn(() => null))
-jest.mock('./Loader', () => jest.fn(() => <div>Loading...</div>))
+vi.mock('../hooks/usePokemonList')
+vi.mock('./PokemonPreview', () => ({ default: vi.fn(() => null) }))
+vi.mock('./Loader', () => ({ default: vi.fn(() => <div>Loading...</div>) }))
 
 describe('📋 PokemonList 📋', () => {
   let mockSearchParams = new URLSearchParams()
-  const mockSetSearchParams = jest.fn((newParams) => {
+  const mockSetSearchParams = vi.fn((newParams) => {
     mockSearchParams = new URLSearchParams(newParams)
     // Optionally, trigger any effects or re-renders as needed
   })
@@ -24,24 +27,24 @@ describe('📋 PokemonList 📋', () => {
     // Reset search params and mocks before each test
     mockSearchParams = new URLSearchParams({ offset: '0' })
     mockSetSearchParams.mockClear()
-    ;(useSearchParams as jest.Mock).mockReturnValue([mockSearchParams, mockSetSearchParams])
+    ;(useSearchParams as vi.Mock).mockReturnValue([mockSearchParams, mockSetSearchParams])
     ;(PokemonPreview as jest.Mock).mockImplementation(({ pokemon }) => <div>{pokemon.name}</div>)
   })
 
   it('🔄 displays loader when loading', () => {
-    ;(usePokemonList as jest.Mock).mockReturnValue({ loading: true })
+    ;(usePokemonList as vi.Mock).mockReturnValue({ loading: true })
     render(<PokemonList />)
     expect(screen.getByText('Loading...')).toBeInTheDocument()
   })
 
   it('❌ displays error message on error', () => {
-    ;(usePokemonList as jest.Mock).mockReturnValue({ error: 'Test Error' })
+    ;(usePokemonList as vi.Mock).mockReturnValue({ error: 'Test Error' })
     render(<PokemonList />)
     expect(screen.getByText('Error: Test Error')).toBeInTheDocument()
   })
 
   it('👀 renders PokemonPreview for each pokemon', () => {
-    ;(usePokemonList as jest.Mock).mockReturnValue({
+    ;(usePokemonList as vi.Mock).mockReturnValue({
       pokemonList: [
         { name: 'Bulbasaur', url: 'url1' },
         { name: 'Charmander', url: 'url2' },
@@ -54,7 +57,7 @@ describe('📋 PokemonList 📋', () => {
   })
 
   it('⏭️ navigates to next and previous pages', () => {
-    ;(usePokemonList as jest.Mock).mockReturnValue({
+    ;(usePokemonList as vi.Mock).mockReturnValue({
       pokemonList: [],
       loading: false,
       hasNext: true,

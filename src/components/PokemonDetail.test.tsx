@@ -1,26 +1,30 @@
+import '@testing-library/jest-dom'
+
+import * as api from '../api/pokemon'
+import * as hooks from '../hooks/usePokemonDetails'
+
 import React, { act } from 'react'
 import { render, screen, waitFor } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import { BrowserRouter as Router } from 'react-router-dom'
+
 import PokemonDetail from './PokemonDetail'
-import * as hooks from '../hooks/usePokemonDetails'
-import * as api from '../api/pokemon'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { vi } from 'vitest'
 
 // Mock the useParams hook to simulate receiving a parameter
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
+vi.mock('react-router-dom', async () => ({
+  ...(await vi.importActual('react-router-dom')),
   useParams: () => ({
     name: 'pikachu',
   }),
-  useNavigate: () => jest.fn(),
+  useNavigate: () => vi.fn(),
   useLocation: () => ({
     state: { offset: 0 },
   }),
 }))
 
 // Mock the usePokemonDetails hook
-jest.mock('../hooks/usePokemonDetails')
-jest.mock('../api/pokemon')
+vi.mock('../hooks/usePokemonDetails')
+vi.mock('../api/pokemon')
 
 const mockPokemonDetails = {
   name: 'pikachu',
@@ -41,9 +45,9 @@ const mockPokemonDetails = {
   },
 }
 
-const mockUsePokemonDetails = hooks.usePokemonDetails as jest.Mock
-const getPokemonSpecies = api.getPokemonSpecies as jest.Mock
-const getPokemonEvolutions = api.getPokemonEvolutions as jest.Mock
+const mockUsePokemonDetails = hooks.usePokemonDetails as vi.Mock
+const getPokemonSpecies = api.getPokemonSpecies as vi.Mock
+const getPokemonEvolutions = api.getPokemonEvolutions as vi.Mock
 
 describe('🧐 PokemonDetail 🧐', () => {
   beforeEach(() => {
@@ -63,7 +67,7 @@ describe('🧐 PokemonDetail 🧐', () => {
   })
 
   afterEach(() => {
-    jest.restoreAllMocks()
+    vi.restoreAllMocks()
   })
 
   it('🚀 renders without crashing', async () => {

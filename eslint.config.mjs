@@ -2,7 +2,6 @@ import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import typescript from '@typescript-eslint/eslint-plugin'
 import typescriptParser from '@typescript-eslint/parser'
-import jest from 'eslint-plugin-jest'
 import prettier from 'eslint-plugin-prettier'
 
 export default [
@@ -28,7 +27,6 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
-      jest,
       prettier,
       react,
       'react-hooks': reactHooks,
@@ -39,9 +37,6 @@ export default [
       '@typescript-eslint/explicit-module-boundary-types': 'warn',
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
-      'jest/no-disabled-tests': 'warn',
-      'jest/no-focused-tests': 'error',
-      'jest/no-identical-title': 'error',
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
     },
